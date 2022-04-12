@@ -8,6 +8,15 @@
             const placeid = urlParams.get('placeid');
 
             console.log(placeid)
+            
+            const request = new XMLHttpRequest();
+            const url = 'https://api.roblox.com/universes/get-universe-containing-place?placeid=8880467254';
+
+            request.open('GET', url, true);
+            request.onload = function () {
+              console.log(request.responseText);
+            };
+            request.send();
         </script>
     </body>
 </html>
