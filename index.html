@@ -3,8 +3,11 @@
 <head></head>
     <body>
         <script>
-            var a = 5; // a라는 변수 선언 및 초기화
-            console.log(a * a);
+            const urlParams = new URL(location.href).searchParams;
+
+            const placeid = urlParams.get('placeid');
+
+            console.log(placeid)
         </script>
     </body>
 </html>
